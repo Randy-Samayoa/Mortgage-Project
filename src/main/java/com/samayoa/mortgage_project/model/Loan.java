@@ -9,5 +9,10 @@ public class Loan {
     private String loanType;
     private String description;
 
-    //contructors, getters, and setters
+    public Loan(String loanType, String description){
+        this.loanType = loanType;
+        this.description = description;
+    }
+
+    //constructors, getters, and setters
 }

@@ -7,10 +7,14 @@ import java.util.List;
 
 @Service
 public class LoanService {
-    @Autowired
     private LoanRepository loanRepository;
 
-    public List<Loan> getAllLoans() {
+    @Autowired
+    public LoanService(LoanRepository loanRepository) {
+        this.loanRepository = loanRepository;
+    }
+
+    public List<Loan> getAllLoans(){
         return loanRepository.findAll();
     }
 }
